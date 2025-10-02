@@ -50,22 +50,11 @@
 
             // code here
             long result = 1;
-            if (b>=0)
+            for (int i = 0; i < b; i++)
             {
-                for(int i = 0; i < b; i++)
-                {
-                    answer *= a;
-                }
-                answer = result;
+                result *= a;
             }
-            else
-            {
-                for (int i = 0; i < -b; i++)
-                {
-                    answer *= a;
-                }
-                answer = 1/result;
-            }
+            answer = result;
             // end
 
             return answer;
@@ -79,11 +68,8 @@
             long product = 1;
             while (product <= L)
             {
+                n += 3;
                 product *= n;
-                if (product <= L)
-                {
-                    n += 3;
-                }
             }
             answer = n;
             // end
