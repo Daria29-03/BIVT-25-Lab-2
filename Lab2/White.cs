@@ -65,13 +65,18 @@
 
             // code here
             int n = 1;
-            long product = 1;
-            while (product <= L)
+            for (int i = 1; true; i+=3)
             {
-                n += 3;
-                product *= n;
+                n *= i;
+                if (n > L)
+                {
+                    answer = i;
+                    break;
+                }
             }
-            answer = n;
+           
+            
+            
             // end
 
             return answer;
